@@ -1,4 +1,4 @@
-Josh:
+Josh's advice for building a simple website:
 could use Hugo for static site
 
 Or, FastAPI, NodeJS & POstgres

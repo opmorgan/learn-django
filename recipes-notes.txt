@@ -1,4 +1,4 @@
-Josh:
+Josh's advice:
 could use Hugo for static site
 
 Or, FastAPI, NodeJS & POstgres
@@ -54,10 +54,7 @@ todo: go through django tutorial: https://docs.djangoproject.com/en/4.1/intro/tu
 then, we can set up lit.
 
 
-Working through Tutorial
-
-
-Questions for Josh
+Questions for Josh, from Tutorial
 1. What is include() doing? what valid paths are captured by include('polls.urls')? Is this safe?
 2. How can I preview/inspect the databases?
 2. Why is there pk and id? When do they diverge?
@@ -68,53 +65,3 @@ Questions for Josh
 Why does coverage run --source='.' manage.py test myapp
 give the erorr django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
 when psychopg2 is installed in the venv?
-
-
-Step-by-step guide
-Dependencies (system-wide): docker, python3, django
-Dependencies (project python venv): django, psycopg2
-Recommended (project python venv): pylint, redgreenunittest
-
-To create project:
-1. Create project directory
-- django-admin startproject base (use "base" instead of project name to avoid django's default of nesting a directory with the same name, and allow hyphens in project name)
-- rename project directory to [project name]
-2. In project directory, set up python virtual environment and install django
-- python3 -m venv env (Create venv)
-- source env/bin/activate (Activate venv)
-- pip install django (Install django in venv)
-- Also install linters, + (pip install pylint; pip install
-3. Create project files
-- django-admin startproject base (Or: django-admin startproject [project name]/app/config)
-4. Set up postgres database with docker-compose
-- Put docker-compose.yml template file in project directory, specifying default database name (e.g., postgres_dev) (Template: https://gist.github.com/opmorgan/155c8b8ee8a6a68247bad2829800c4ec)
-- Run docker.service (depends on: docker)
-- sudo docker-compose up (compose database; keep this process running while developing)
-- (Later, will need to set upo separate production database)
-5. Hook up postgres database to django
-- open base/settings.py
-- set DATABASES to match docker-compose.yml (Template: https://gist.github.com/opmorgan/aac753bf769b14b5c4a9ff4b14f2c660)
-6. Run server in venv
-- python manage.py runserver
-7. Preview site in browser at localhost:8000 (port specified in manage.py)
-
-Install linters (if not built-in to IDE) and test-output colorizer, in venv.
-- pip install redgreenunittest
-- pip install pylint
-- In base/settings.py, add: TEST_RUNNER="redgreenunittest.django.runner.RedGreenDiscoverRunner"
-
-To set up testing environment, for existing project:
-1. sudo docker compose up (Run the docker container)
-2. source env/bin/activate (Enter python virutal environment)
-3. python manage.py runserver
-4. Preview site in browser at localhost:8000
-
-To make model changes and migrations:
-1. Change models (models.py)
-2. Run python manage.py makemigrations to create migrations for those changes
-3. Run python manage.py migrate to apply those changes to the database.
-(4. Commit migrations to vc)
-
-
-
-
