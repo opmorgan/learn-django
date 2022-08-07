@@ -7,7 +7,7 @@ How to make a simple website with django, following [Django's tutorial](https://
 
 ## To create project
 #### Create project directory
-1. ```django-admin startproject base``` (use "base" instead of project name to avoid django's default of nesting a directory with the same name, and allow hyphens in project name. See [discussion on django forums](https://perma.cc/E2XF-CKZD))
+1. ```django-admin startproject app``` (use "app","base", or "config" instead of project name to avoid django's default of nesting a directory with the same name, and allow hyphens in project name. See [discussion on django forums](https://perma.cc/E2XF-CKZD))
 1. rename project directory to [project name]
 #### In project directory, set up python virtual environment and install django
 1. ```python3 -m venv env``` (Create venv)
@@ -19,7 +19,7 @@ How to make a simple website with django, following [Django's tutorial](https://
 1. ```sudo docker-compose up``` (compose database; keep this process running while developing)
 1. (Later, set up a separate databse for production)
 #### Hook up postgres database to django
-1. Open *base/settings.py*
+1. Open *app/settings.py*
 1. Set ```DATABASES``` to match docker-compose.yml ([Template](https://gist.github.com/opmorgan/aac753bf769b14b5c4a9ff4b14f2c660))
 1. ```python manage.py migrate```(Make initial migrations)
 #### Run server in venv
@@ -41,4 +41,4 @@ How to make a simple website with django, following [Django's tutorial](https://
 ## To install linter and test-output colorizer, in venv
 1. ```pip install pylint```
 1. ```pip install redgreenunittest```
-1. In *base/settings.py*, add: ```TEST_RUNNER="redgreenunittest.django.runner.RedGreenDiscoverRunner"```
+1. In *app/settings.py*, add: ```TEST_RUNNER="redgreenunittest.django.runner.RedGreenDiscoverRunner"```
