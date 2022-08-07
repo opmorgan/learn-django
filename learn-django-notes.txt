@@ -73,12 +73,11 @@ Why does coverage run --source='.' manage.py test myapp
 give the erorr django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
 when psychopg2 is installed in the venv?
 
-Documentation
-Set up testing environment
-1. sudo docker compose up
-2. source env/bin/activate
+To set up testing environment:
+1. sudo docker compose up (Run the docker container)
+2. source env/bin/activate (Enter python virutal environment)
 3. python manage.py  runserver
-4. preview site in browser at localhost:8000
+4. Preview site in browser at localhost:8000
 
 
 
