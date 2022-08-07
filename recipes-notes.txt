@@ -66,6 +66,12 @@ Questions for Josh
 2. How can I preview/inspect the databases?
 2. Why is there pk and id? When do they diverge?
 3. Why isn't the namespace for templates linked to the app name? (Why do we need a subdirectory with the app namespace?)
+4. When would you use request.GET?
+4. When I import "F" from django.models, localhost refuses to connect. why?
+  https://docs.djangoproject.com/en/4.1/ref/models/expressions/#avoiding-race-conditions-using-f
+Why does coverage run --source='.' manage.py test myapp
+give the erorr django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+when psychopg2 is installed in the venv?
 
 Documentation
 Set up testing environment
