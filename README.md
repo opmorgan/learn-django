@@ -43,7 +43,7 @@ How to make a simple website with django, following [Django's tutorial](https://
 1. ```pip install redgreenunittest```
 1. In *app/settings.py*, add: ```TEST_RUNNER="redgreenunittest.django.runner.RedGreenDiscoverRunner"```
 
-## Make admin user and modify databse through admin interface
+## Make admin user and modify database through admin interface
 1. ```python manage.py createsuperuser```
 1. Navigate to admin site: localhost:8000/admin
 1. Make the app modifiable by admin, by adding to *[app name]/admin.py*:
