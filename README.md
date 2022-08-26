@@ -49,7 +49,7 @@ How to make a simple website with django, following [Django's tutorial](https://
 1. Make the app modifiable by admin, by adding to *[app name]/admin.py*:
 ```
 from django.contrib import admin
-from .models import [Model name]
-admin.site.register([Model name])
+from .models import [ModelName]
+admin.site.register([ModelName])
 ```
 
