@@ -39,7 +39,7 @@ Quick reference for how to make a website with django, following [Django's tutor
 3. Run ```python manage.py migrate``` to apply those changes to the database.
 
 ## To install linter and test-output colorizer, in venv
-1. ```pip install pylint```
+1. ```pip install pylint``` (If using nvim/nvim-coc as IDE)
 1. ```pip install redgreenunittest```
 1. In *app/settings.py*, add: ```TEST_RUNNER="redgreenunittest.django.runner.RedGreenDiscoverRunner"```
 
