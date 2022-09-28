@@ -7,7 +7,7 @@ Quick reference for how to make a website with django, following [Django's tutor
 
 ## To create project
 #### Create project directory
-1. ```django-admin startproject app``` (use "app", "base", or "config" instead of project name to avoid django's default of nesting a directory with the same name, and allow hyphens in project name. See [discussion on django forums](https://perma.cc/E2XF-CKZD))
+1. ```django-admin startproject [appname]``` (use "app", "base", or "config" instead of project name to avoid django's default of nesting a directory with the same name, and allow hyphens in project name. See [discussion on django forums](https://perma.cc/E2XF-CKZD))
 1. rename project directory to [project name]
 #### In project directory, set up python virtual environment and install django
 1. ```python3 -m venv env``` (Create venv)
