@@ -1,7 +1,7 @@
 Quick reference for how to make a website with django, following [Django's tutorial](https://docs.djangoproject.com/en/4.1/intro/tutorial01/):
 
 ## Dependencies
-- System-wide: ```docker```, ```python3```, ```django```
+- System-wide: ```docker```, ```docker-compose```, ```python3```, ```django```
 - Installed in project's python virtual environment: ```django```, ```psycopg2```
 - Recommended (project python venv): ```wheel```, ```pylint```, ```redgreenunittest```
 
